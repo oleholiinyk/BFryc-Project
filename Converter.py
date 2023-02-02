@@ -130,7 +130,7 @@ class Converter:
             element = self.rootXml.createElement(self.elements[el])
             element.appendChild(self.rootXml.createTextNode(value))
             xmlElement.appendChild(element)
-            logging.info('Data: ' + self.elements[el] + ": " + value)
+            logging.info('Data: [' + self.elements[el] + ": " + value + ']')
             
     def xmlTree(self):        
         xml = self.rootXml.createElement('metadata')
