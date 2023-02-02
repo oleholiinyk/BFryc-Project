@@ -10,12 +10,11 @@ class Converter:
     XML_EXTENTION = '.xml'
     PROLOG_EXTENTION = '.pl'
     
-    def __init__(self, file, tag, elements = []):
+    def __init__(self, file, tag, tags = []):
         self.file = file
         self.tag = tag
-        self.elements = elements
-        if elements:
-            self.rootXml = minidom.Document()
+        self.tags = tags
+        self.rootXml = minidom.Document()
         self.fileName = ''
         self.fileExtention = ''
 
@@ -27,7 +26,6 @@ class Converter:
         
     def run(self):
         self.setFileInfo()
-        
         logging.info('Check file extention...')
         if self.fileExtention == self.XML_EXTENTION:
             logging.info('File extention is "' + self.fileExtention +'"')
@@ -127,10 +125,10 @@ class Converter:
         xml.appendChild(xmlElement)
         
         for el, value in enumerate(list):        
-            element = self.rootXml.createElement(self.elements[el])
+            element = self.rootXml.createElement(self.tags[el])
             element.appendChild(self.rootXml.createTextNode(value))
             xmlElement.appendChild(element)
-            logging.info('Data: [' + self.elements[el] + ": " + value + ']')
+            logging.info('Data: [' + self.tags[el] + ": " + value + ']')
             
     def xmlTree(self):        
         xml = self.rootXml.createElement('metadata')
