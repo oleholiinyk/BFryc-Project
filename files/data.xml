@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<student>
+		<name>Liam</name>
+		<surname>Smith</surname>
+		<age>21</age>
+		<direction>SoftwareEngineering</direction>
+	</student>
+	<student>
+		<name>Noah</name>
+		<surname>Jones</surname>
+		<age>22</age>
+		<direction>ComputerScience</direction>
+	</student>
+	<student>
+		<name>Oliver</name>
+		<surname>Williams</surname>
+		<age>20</age>
+		<direction>Design</direction>
+	</student>
+	<student>
+		<name>Lucas</name>
+		<surname>Taylor</surname>
+		<age>18</age>
+		<direction>Marketing</direction>
+	</student>
+	<student>
+		<name>James</name>
+		<surname>Brown</surname>
+		<age>19</age>
+		<direction>Journalist</direction>
+	</student>
+</metadata>
